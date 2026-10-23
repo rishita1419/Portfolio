@@ -192,15 +192,15 @@
 
   <!-- Sticky Navigation Bar -->
   <header class="sticky top-0 z-40 backdrop-blur-md bg-[#FAF7F2]/90 dark:bg-[#111916]/90 border-b border-[#E6DEC8] dark:border-[#2E4239] transition-colors">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-3">
+    <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 min-h-[4rem] py-2 flex items-center justify-between gap-2 sm:gap-3">
       <!-- Brand Identity -->
-      <a href="#hero" class="flex items-center gap-3 group focus:outline-none">
-        <div class="w-10 h-10 rounded-xl bg-sage-700 dark:bg-clay-500 text-ivory-50 flex items-center justify-center font-serif font-bold text-xl tracking-wider shadow-sm group-hover:scale-105 transition-transform">
+      <a href="#hero" class="flex items-center gap-2.5 sm:gap-3 group focus:outline-none min-w-0 shrink">
+        <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-sage-700 dark:bg-clay-500 text-ivory-50 flex items-center justify-center font-serif font-bold text-lg sm:text-xl tracking-wider shadow-sm group-hover:scale-105 transition-transform shrink-0">
           RS
         </div>
-        <div>
-          <span class="block font-serif font-bold text-lg leading-none tracking-tight">Rishita Srivastava</span>
-          <span class="block text-[11px] uppercase tracking-widest text-sage-600 dark:text-ivory-300 mt-0.5 font-medium">HR Psychologist &bull; People Ops</span>
+        <div class="min-w-0">
+          <span class="block font-serif font-bold text-base sm:text-lg leading-tight tracking-tight whitespace-nowrap truncate">Rishita Srivastava</span>
+          <span class="block text-[9.5px] sm:text-[11px] uppercase tracking-wider sm:tracking-widest text-sage-600 dark:text-ivory-300 mt-0.5 font-medium whitespace-nowrap truncate">HR Psychologist &bull; People Ops</span>
         </div>
       </a>
 
@@ -218,20 +218,20 @@
       </nav>
 
       <!-- Action Controls -->
-      <div class="flex items-center gap-2">
-        <button id="themeToggleBtn" type="button" class="p-2 rounded-xl border border-[#E6DEC8] dark:border-[#2E4239] hover:bg-ivory-100 dark:hover:bg-sage-800 transition-colors text-xs font-medium flex items-center gap-1.5" title="Switch Cognitive Environment Theme">
+      <div class="flex items-center gap-1.5 sm:gap-2 shrink-0">
+        <button id="themeToggleBtn" type="button" class="p-2 rounded-xl border border-[#E6DEC8] dark:border-[#2E4239] hover:bg-ivory-100 dark:hover:bg-sage-800 transition-colors text-xs font-medium flex items-center gap-1.5 shrink-0" title="Switch Cognitive Environment Theme">
           <svg id="themeIconSun" class="w-4 h-4 hidden text-ochre-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
           <svg id="themeIconMoon" class="w-4 h-4 text-sage-700" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
           <span id="themeLabel" class="hidden sm:inline">Focus Mode</span>
         </button>
 
-        <button id="openDossierBtn" type="button" class="px-3.5 py-2 rounded-xl bg-sage-700 hover:bg-sage-800 dark:bg-clay-500 dark:hover:bg-clay-600 text-white text-xs sm:text-sm font-medium transition-colors shadow-sm flex items-center gap-1.5">
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+        <button id="openDossierBtn" type="button" class="px-2.5 sm:px-3.5 py-2 rounded-xl bg-sage-700 hover:bg-sage-800 dark:bg-clay-500 dark:hover:bg-clay-600 text-white text-xs sm:text-sm font-medium transition-colors shadow-sm flex items-center gap-1 sm:gap-1.5 whitespace-nowrap shrink-0">
+          <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
           <span>Executive CV</span>
         </button>
 
         <!-- Mobile Menu Toggle -->
-        <button id="mobileMenuBtn" type="button" class="lg:hidden p-2 rounded-xl border border-[#E6DEC8] dark:border-[#2E4239]" aria-label="Open Navigation Menu">
+        <button id="mobileMenuBtn" type="button" class="lg:hidden p-2 rounded-xl border border-[#E6DEC8] dark:border-[#2E4239] shrink-0" aria-label="Open Navigation Menu">
           <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
         </button>
       </div>
@@ -257,10 +257,10 @@
           
           <!-- Left Column: Narrative & CTA -->
           <div class="lg:col-span-7 space-y-6">
-            <div class="inline-flex flex-wrap items-center gap-2 px-3.5 py-1.5 rounded-full bg-sage-50 dark:bg-sage-800/80 border border-sage-100 dark:border-sage-700 text-sage-700 dark:text-ivory-100 text-xs font-medium">
-              <span class="w-2 h-2 rounded-full bg-emerald-600 animate-pulse"></span>
+            <div class="inline-flex flex-wrap items-center gap-x-2 gap-y-1 px-3.5 py-2 sm:py-1.5 rounded-2xl sm:rounded-full bg-sage-50 dark:bg-sage-800/80 border border-sage-100 dark:border-sage-700 text-sage-700 dark:text-ivory-100 text-xs font-medium leading-snug">
+              <span class="w-2 h-2 rounded-full bg-emerald-600 animate-pulse shrink-0"></span>
               <span>Seeking HR, Organizational Psychology &amp; Counselling Internships</span>
-              <span class="text-sage-500 dark:text-ivory-300">|</span>
+              <span class="hidden sm:inline text-sage-500 dark:text-ivory-300">|</span>
               <span class="font-semibold text-clay-600 dark:text-clay-500">Top 3% Applied Psychology Scholar</span>
             </div>
 
@@ -720,18 +720,18 @@
 
           <!-- Right 5 Cols: Competency Radar Chart & Tools/Languages Card -->
           <div class="lg:col-span-5 space-y-5">
-            <div class="surface-card rounded-3xl p-6">
-              <div class="flex items-center justify-between mb-2">
+            <div class="surface-card rounded-3xl p-4 sm:p-6">
+              <div class="flex flex-wrap items-center justify-between gap-1 mb-2">
                 <span class="text-xs font-bold uppercase tracking-wider text-sage-600 dark:text-ivory-300">Psychometric &amp; Operational Balance</span>
                 <span id="activeRoleBadge" class="text-[11px] font-semibold text-clay-600 dark:text-clay-500">Full Practitioner Profile</span>
               </div>
-              <div class="relative h-72 w-full">
+              <div class="relative h-72 sm:h-80 w-full">
                 <canvas id="skillsRadarChart"></canvas>
               </div>
             </div>
 
             <!-- Tools, Platforms & Languages -->
-            <div class="surface-card rounded-3xl p-6 space-y-4">
+            <div class="surface-card rounded-3xl p-4 sm:p-6 space-y-4">
               <h3 class="serif-heading text-xl font-bold">Tools, Platforms &amp; Languages</h3>
               <div class="space-y-3 text-xs sm:text-sm">
                 <div>
@@ -1664,19 +1664,35 @@
       counseling: { label: 'Workplace Well-Being & Counseling Lens', data: [88, 99, 98, 92, 94, 99] }
     };
 
+    function getRadarLabels() {
+      const isCompact = window.innerWidth < 640;
+      if (isCompact) {
+        return [
+          ['Multi-Pod', 'Ops'],
+          ['Work', 'Motivation'],
+          ['Conflict &', 'Empathy'],
+          ['KPI', 'Governance'],
+          ['Psychometrics'],
+          ['Ethical', 'Discretion']
+        ];
+      }
+      return [
+        'Multi-Pod Ops',
+        'Work Motivation',
+        'Conflict & Empathy',
+        'KPI Governance',
+        'Psychometrics',
+        'Ethical Discretion'
+      ];
+    }
+
     function initSkillsRadar() {
       const ctx = document.getElementById('skillsRadarChart').getContext('2d');
+      const isCompact = window.innerWidth < 640;
       skillsRadarInstance = new Chart(ctx, {
         type: 'radar',
         data: {
-          labels: [
-            'Multi-Pod Ops',
-            'Work Motivation',
-            'Conflict & Empathy',
-            'KPI Governance',
-            'Psychometrics',
-            'Ethical Discretion'
-          ],
+          labels: getRadarLabels(),
           datasets: [{
             label: 'Competency Index',
             data: roleRadarProfiles.all.data,
@@ -1689,18 +1705,43 @@
         options: {
           responsive: true,
           maintainAspectRatio: false,
+          layout: {
+            padding: {
+              left: isCompact ? 18 : 12,
+              right: isCompact ? 18 : 12,
+              top: 8,
+              bottom: 8
+            }
+          },
           scales: {
             r: {
               suggestedMin: 70,
               suggestedMax: 100,
               ticks: { display: false },
-              pointLabels: { font: { size: 11, weight: '600' } }
+              pointLabels: {
+                padding: isCompact ? 4 : 6,
+                font: {
+                  size: isCompact ? 10 : 11,
+                  weight: '600'
+                }
+              }
             }
           },
           plugins: {
             legend: { display: false }
           }
         }
+      });
+
+      window.addEventListener('resize', () => {
+        if (!skillsRadarInstance) return;
+        const mobileNow = window.innerWidth < 640;
+        skillsRadarInstance.data.labels = getRadarLabels();
+        skillsRadarInstance.options.layout.padding.left = mobileNow ? 18 : 12;
+        skillsRadarInstance.options.layout.padding.right = mobileNow ? 18 : 12;
+        skillsRadarInstance.options.scales.r.pointLabels.font.size = mobileNow ? 10 : 11;
+        skillsRadarInstance.options.scales.r.pointLabels.padding = mobileNow ? 4 : 6;
+        skillsRadarInstance.update();
       });
     }
 
