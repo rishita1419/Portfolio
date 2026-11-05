@@ -623,8 +623,8 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
         <div class="links">
           <div class="link-row">
             <span class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span>
-            <div><b>contact.rishita@gmail.com</b><span>Email</span></div>
-            <div class="end"><button class="mini" id="copyEmail">Copy</button><a class="mini" href="mailto:contact.rishita@gmail.com">Write</a></div>
+            <div><b>rishitasrivastava14@gmail.com</b><span>Email</span></div>
+            <div class="end"><button class="mini" id="copyEmail">Copy</button><a class="mini" href="mailto:rishitasrivastava14@gmail.com">Write</a></div>
           </div>
           <a class="link-row" href="https://www.linkedin.com/in/rishita14" target="_blank" rel="noopener">
             <span class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.5h4V21H3zM9.5 9.5h3.8v1.6h.1c.5-1 1.8-2 3.8-2 4 0 4.8 2.6 4.8 6V21h-4v-5.2c0-1.3 0-2.9-1.8-2.9s-2 1.4-2 2.8V21h-4z"/></svg></span>
@@ -649,7 +649,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
 </section>
 </main>
 
-<footer><div class="wrap"><span>© <span id="yr">2026</span> Rishita Srivastava · B.Sc. (Hons.) Applied Psychology, Doon University</span><span><a href="#hero">Back to top ↑</a></span></div></footer>
+<footer><div class="wrap"><span>© <span id="yr">2026</span> www.rishitasrivastava.com · All Rights Reserved</span><span><a href="#hero">Back to top ↑</a></span></div></footer>
 
 <div class="toast" id="toast" role="status"></div>
 
@@ -657,7 +657,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
 <div class="modal" id="cvModal" role="dialog" aria-modal="true" aria-label="Curriculum vitae">
   <article class="cv">
     <h1>Rishita Srivastava</h1>
-    <div class="ct">contact.rishita@gmail.com · Dehradun, Uttarakhand · linkedin.com/in/rishita14</div>
+    <div class="ct">rishitasrivastava14@gmail.com · Dehradun, Uttarakhand · linkedin.com/in/rishita14</div>
     <h4>Summary</h4>
     <p>Applied Psychology undergraduate (CGPA 8.3/10, Top 3%) at Doon University working at the intersection of HR and psychology. Pod Lead – HR with hands-on experience in hiring, onboarding, performance tracking, employee relations and reward design, working directly with a Founder's Office across 16 functional pods.</p>
     <h4>Experience</h4>
@@ -992,15 +992,15 @@ $$('.course').forEach(c => c.addEventListener('click', () => c.classList.toggle(
 /* ---------- contact ---------- */
 const toast = msg => { const t = $('#toast'); t.textContent = msg; t.classList.add('show'); clearTimeout(t._h); t._h = setTimeout(() => t.classList.remove('show'), 2200); };
 $('#copyEmail').addEventListener('click', async () => {
-  try { await navigator.clipboard.writeText('contact.rishita@gmail.com'); toast('Email copied'); }
-  catch (e) { toast('contact.rishita@gmail.com'); }
+  try { await navigator.clipboard.writeText('rishitasrivastava14@gmail.com'); toast('Email copied'); }
+  catch (e) { toast('rishitasrivastava14@gmail.com'); }
 });
 $('#compose').addEventListener('submit', e => {
   e.preventDefault();
   const n = $('#fName').value.trim(), o = $('#fOrg').value.trim(), r = $('#fRole').value, m = $('#fMsg').value.trim();
   const subject = `${r}${o ? ' — ' + o : ''}`;
   const body = `Hi Rishita,\n\n${m || 'I came across your portfolio and would love to connect.'}\n\n${n || ''}${o ? '\n' + o : ''}`;
-  location.href = `mailto:contact.rishita@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  location.href = `mailto:rishitasrivastava14@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 });
 $('#yr').textContent = new Date().getFullYear();
 
