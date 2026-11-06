@@ -152,6 +152,7 @@ header.nav.scrolled{background:color-mix(in srgb,var(--surface-solid) 78%,transp
 .hero-right .stat{padding:13px 8px;text-align:center}
 .hero-right .stat b{font-size:clamp(20px,2vw,27px)}
 .hero-right .stat span{display:block;font-size:10px;line-height:1.35;margin-top:5px}
+.now-card{background:color-mix(in srgb,var(--surface) 65%,transparent)}
 .scroll-hint{position:absolute;left:50%;bottom:14px;transform:translateX(-50%);z-index:2;font-size:11px;font-weight:700;letter-spacing:.2em;color:var(--muted);display:flex;flex-direction:column;align-items:center;gap:8px}
 .scroll-hint i{width:1.5px;height:34px;background:linear-gradient(var(--accent),transparent);animation:drip 2s ease-in-out infinite;transform-origin:top}
 @keyframes drip{0%{transform:scaleY(0)}50%{transform:scaleY(1)}100%{transform:scaleY(1);opacity:0}}
@@ -326,6 +327,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
   .hero-grid,.about-grid,.skills-grid,.learn-grid,.contact-card,.role-panel{grid-template-columns:1fr}
   .now-card{max-width:520px}
   .stats{grid-template-columns:repeat(3,1fr)}
+  .hero-right .stats{grid-template-columns:repeat(3,minmax(0,1fr))}
   .stat:nth-child(3){border-right:0}
   .stat:nth-child(n+4){border-top:1px solid var(--line)}
   .role-meta{border-right:0;border-bottom:1px solid var(--line)}
@@ -340,6 +342,8 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
   .brand small{display:none}
   #hero{padding-top:calc(var(--nav-h) + 30px)}
   .stats{grid-template-columns:1fr 1fr}
+  .hero-right .stats{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .hero-right .stat:last-child span{white-space:nowrap;font-size:clamp(8px,2.4vw,10px)}
   .stat{border-right:1px solid var(--line)!important;border-top:1px solid var(--line)}
   .stat:nth-child(-n+2){border-top:0}
   .stat:nth-child(2n){border-right:0!important}
