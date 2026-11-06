@@ -147,6 +147,11 @@ header.nav.scrolled{background:color-mix(in srgb,var(--surface-solid) 78%,transp
 .stat b{display:block;font-family:var(--serif);font-weight:500;font-size:clamp(28px,3vw,40px);letter-spacing:-.03em;line-height:1}
 .stat b sup{font-size:.5em;color:var(--accent);vertical-align:.7em;margin-left:2px}
 .stat span{font-size:12.5px;color:var(--muted);font-weight:600}
+.hero-right{display:grid;gap:14px;align-content:center;min-width:0}
+.hero-right .stats{margin-top:0;grid-template-columns:repeat(5,minmax(0,1fr));}
+.hero-right .stat{padding:13px 8px;text-align:center}
+.hero-right .stat b{font-size:clamp(20px,2vw,27px)}
+.hero-right .stat span{display:block;font-size:10px;line-height:1.35;margin-top:5px}
 .scroll-hint{position:absolute;left:50%;bottom:14px;transform:translateX(-50%);z-index:2;font-size:11px;font-weight:700;letter-spacing:.2em;color:var(--muted);display:flex;flex-direction:column;align-items:center;gap:8px}
 .scroll-hint i{width:1.5px;height:34px;background:linear-gradient(var(--accent),transparent);animation:drip 2s ease-in-out infinite;transform-origin:top}
 @keyframes drip{0%{transform:scaleY(0)}50%{transform:scaleY(1)}100%{transform:scaleY(1);opacity:0}}
@@ -421,6 +426,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
           <a href="#contact" class="btn btn-ghost magnet">Get in touch</a>
         </div>
       </div>
+      <div class="hero-right">
       <aside class="card now-card rv tilt" data-d="2" aria-label="Current role">
         <span class="tag">Right now</span>
         <h3>Pod Lead – HR</h3>
@@ -433,13 +439,14 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
           <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></svg>HR automation with 'ARC' tool</li>
         </ul>
       </aside>
-    </div>
-    <div class="stats card rv" data-d="3">
+      <div class="stats card rv" data-d="3">
       <div class="stat"><b data-count="16">0</b><span>functional pods coordinated</span></div>
       <div class="stat"><b data-count="50" data-suf="+">0</b><span>team members tracked</span></div>
       <div class="stat"><b data-count="40" data-suf="+">0</b><span>new hires inducted</span></div>
       <div class="stat"><b data-count="98" data-suf="%">0</b><span>on-time project delivery</span></div>
       <div class="stat"><b data-count="30" data-pre="+" data-suf="%">0</b><span>efficiency lift from rewards</span></div>
+      </div>
+      </div>
     </div>
   </div>
 </section>
