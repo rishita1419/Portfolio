@@ -158,7 +158,18 @@ header.nav.scrolled{background:color-mix(in srgb,var(--surface-solid) 78%,transp
 .hero-right .stat{padding:13px 8px;text-align:center}
 .hero-right .stat b{font-size:clamp(20px,2vw,27px)}
 .hero-right .stat span{display:block;font-size:10px;line-height:1.35;margin-top:5px}
-.now-card{background:color-mix(in srgb,var(--surface) 80%,transparent)}
+.now-card{background:rgba(38,70,48,.20)}
+:root:not([data-theme="dark"]) .now-card h3,
+:root:not([data-theme="dark"]) .now-card h4,
+:root:not([data-theme="dark"]) .now-card .sub,
+:root:not([data-theme="dark"]) .now-card .now-list li {
+  color: #000;
+  font-weight: 800;
+}
+
+:root[data-theme="dark"] .now-card {
+  color: var(--ink);
+}
 .scroll-hint{position:absolute;left:50%;bottom:14px;transform:translateX(-50%);z-index:2;font-size:11px;font-weight:700;letter-spacing:.2em;color:var(--muted);display:flex;flex-direction:column;align-items:center;gap:8px}
 .scroll-hint i{width:1.5px;height:34px;background:linear-gradient(var(--accent),transparent);animation:drip 2s ease-in-out infinite;transform-origin:top}
 @keyframes drip{0%{transform:scaleY(0)}50%{transform:scaleY(1)}100%{transform:scaleY(1);opacity:0}}
@@ -1285,6 +1296,8 @@ const startScene = () => {
     ringMat.color.set(dark ? '#62C980' : '#1F5A37');
     core.material.color.set(dark ? '#3E8E57' : '#C6D5BD');
     pMat.blending = dark ? THREE.AdditiveBlending : THREE.NormalBlending; pMat.needsUpdate = true;
+    const m = innerWidth < 900;
+    canvas.style.opacity = dark ? (m ? .45 : 1) : (m ? .2 : .4);
   };
   palette(); themeListeners.push(palette);
 
@@ -1294,7 +1307,7 @@ const startScene = () => {
     const m = innerWidth < 900;
     group.position.set(m ? 0 : 2.6, m ? 1.2 : 0.1, 0);
     group.scale.setScalar(m ? .78 : 1);
-    canvas.style.opacity = m ? .45 : 1;
+    canvas.style.opacity = isDark() ? (m ? .45 : 1) : (m ? .2 : .4);
   };
   resize(); addEventListener('resize', resize);
 
