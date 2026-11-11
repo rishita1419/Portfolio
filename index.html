@@ -1,11 +1,11 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Rishita Srivastava</title>
 <meta name="description" content="Rishita Srivastava — Applied Psychology undergraduate at Doon University and Pod Lead – HR. Talent acquisition, people operations, employee experience and HR psychology.">
-<meta name="theme-color" content="#AFC2A8">
+<meta name="theme-color" content="#0A1510">
 <meta property="og:title" content="Rishita Srivastava · HR & People Operations">
 <meta property="og:description" content="Applied Psychology undergraduate building the human side of organisations.">
 <meta property="og:url" content="https://www.rishitasrivastava.com">
@@ -15,11 +15,12 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 :root{
-  /* calm sage / eucalyptus — muted mid-tone green, no white surfaces */
-  --bg:#AFC2A8; --bg-2:#A2B79B; --surface:rgba(38,70,48,.10); --surface-solid:#A3B79C; --surface-2:rgba(38,70,48,.07);
-  --ink:#12251A; --ink-2:#253A2C; --muted:#38503F; --line:rgba(18,37,26,.14); --line-2:rgba(18,37,26,.24);
-  --accent:#2A6B43; --accent-2:#5F8E67; --accent-soft:#93AF8E; --deep:#1A3A27; --gold:#86651F; --clay:#A9654A;
-  --glow:rgba(226,236,214,.16); --shadow:0 1px 0 rgba(226,236,214,.22) inset,0 24px 50px -28px rgba(16,38,24,.5);
+  /* LIGHT — "Morning Greenhouse": sunlit jade, tinted glass, warm daylight. Never white. */
+  --bg:#A3C6AB; --bg-2:#8DB698; --surface:rgba(10,56,32,.085); --surface-solid:#99BFA2; --surface-2:rgba(10,56,32,.055);
+  --ink:#0B2115; --ink-2:#183424; --muted:#284836; --line:rgba(8,40,22,.15); --line-2:rgba(8,40,22,.27);
+  --accent:#13623A; --accent-2:#478E61; --accent-soft:#82B591; --deep:#0C3420; --gold:#74530D; --clay:#8F452B;
+  --sun:#F4E2A1; --on-deep:#E2EED8;
+  --glow:rgba(255,234,160,.42); --shadow:0 1px 0 rgba(246,252,226,.38) inset,0 0 0 1px rgba(246,252,226,.06) inset,0 30px 60px -34px rgba(6,46,26,.6),0 2px 8px -3px rgba(6,46,26,.15);
   --radius:22px; --nav-h:68px;
   --serif:'Fraunces',Georgia,serif; --sans:'Manrope',system-ui,-apple-system,Segoe UI,sans-serif;
   color-scheme:light;
@@ -58,6 +59,107 @@ a{color:inherit;text-decoration:none}
 :root[data-theme="dark"] .grain{mix-blend-mode:overlay;opacity:.25}
 .cursor-glow{position:fixed;width:420px;height:420px;border-radius:50%;left:0;top:0;pointer-events:none;z-index:-1;background:radial-gradient(circle,var(--glow),transparent 65%);transform:translate(-50%,-50%);opacity:0;transition:opacity .4s}
 @media (pointer:fine){.cursor-glow{opacity:.7}}
+
+
+/* =====================================================================
+   LIGHT THEME — "Morning Greenhouse"
+   Stepping out of the night forest into a sunlit glasshouse:
+   jade light, leaf shadows swaying on the walls, sun flecks, drifting pollen.
+   ===================================================================== */
+.i-moon{display:none}
+:root[data-theme="light"] .i-sun{display:none}
+:root[data-theme="light"] .i-moon{display:block}
+::view-transition-old(root),::view-transition-new(root){animation:none;mix-blend-mode:normal}
+::view-transition-new(root){z-index:9999}
+
+.daylight{position:fixed;inset:0;z-index:-1;pointer-events:none;overflow:hidden;opacity:0;visibility:hidden;transition:opacity 1.4s ease,visibility 0s 1.4s}
+:root[data-theme="light"] .daylight{opacity:1;visibility:visible;transition:opacity 1.4s ease}
+.sunwash{position:absolute;inset:0;background:
+  radial-gradient(70vmax 55vmax at 4% -8%,rgba(246,229,160,.62),rgba(246,229,160,0) 62%),
+  radial-gradient(60vmax 50vmax at 100% 105%,rgba(52,132,104,.35),transparent 60%),
+  radial-gradient(50vmax 40vmax at 85% 15%,rgba(170,214,160,.35),transparent 60%)}
+.rays{position:absolute;left:-12vmax;top:-12vmax;width:150vmax;height:150vmax;transform-origin:12vmax 12vmax;
+  background:repeating-conic-gradient(from 92deg at 12vmax 12vmax,rgba(255,240,188,0) 0deg,rgba(255,240,188,.2) 2.4deg,rgba(255,240,188,0) 5deg,rgba(255,240,188,0) 9.5deg);
+  -webkit-mask-image:radial-gradient(circle at 12vmax 12vmax,#000 0,rgba(0,0,0,.55) 30%,transparent 62%);mask-image:radial-gradient(circle at 12vmax 12vmax,#000 0,rgba(0,0,0,.55) 30%,transparent 62%);
+  animation:rays 16s ease-in-out infinite;mix-blend-mode:soft-light;filter:blur(2px)}
+@keyframes rays{0%,100%{transform:rotate(-1.5deg);opacity:.75}50%{transform:rotate(2deg);opacity:1}}
+.leaves{position:absolute;width:115vmax;height:86vmax;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 900'%3E%3Cg fill='%2308301c'%3E%3Cpath d='M1128 6C1141 35 1124 63 1099 72C1090 48 1098 16 1128 6Z'/%3E%3Cpath d='M1128 6C1082 24 1039 -4 1026 -42C1064 -57 1113 -42 1128 6Z'/%3E%3Cpath d='M1071 28C1090 55 1079 86 1057 101C1042 79 1044 46 1071 28Z'/%3E%3Cpath d='M1071 28C1043 43 1015 28 1004 4C1027 -7 1059 -0 1071 28Z'/%3E%3Cpath d='M1015 53C1033 97 1006 138 970 151C956 115 970 68 1015 53Z'/%3E%3Cpath d='M1015 53C972 64 937 34 930 -2C965 -10 1007 9 1015 53Z'/%3E%3Cpath d='M959 80C977 115 958 151 928 165C914 136 923 95 959 80Z'/%3E%3Cpath d='M959 80C916 91 880 61 872 25C908 16 951 35 959 80Z'/%3E%3Cpath d='M905 108C929 140 916 179 889 197C870 171 872 130 905 108Z'/%3E%3Cpath d='M905 108C876 129 841 117 825 93C849 77 886 78 905 108Z'/%3E%3Cpath d='M851 139C882 167 877 211 853 236C828 213 820 169 851 139Z'/%3E%3Cpath d='M851 139C815 164 773 148 754 118C783 98 828 102 851 139Z'/%3E%3Cpath d='M797 172C828 199 824 241 800 265C776 243 768 201 797 172Z'/%3E%3Cpath d='M797 172C767 191 732 177 717 152C742 137 779 140 797 172Z'/%3E%3Cpath d='M744 206C759 232 746 259 725 270C714 249 718 219 744 206Z'/%3E%3Cpath d='M744 206C727 224 703 220 689 205C703 191 728 188 744 206Z'/%3E%3Cpath d='M692 243C711 270 700 302 677 316C662 294 664 260 692 243Z'/%3E%3Cpath d='M692 243C660 269 619 257 599 230C625 209 668 209 692 243Z'/%3E%3Cpath d='M641 282C658 301 651 327 635 340C621 324 620 297 641 282Z'/%3E%3Cpath d='M641 282C620 301 591 294 576 277C594 261 623 259 641 282Z'/%3E%3Cpath d='M590 322C610 346 602 378 582 393C566 373 565 341 590 322Z'/%3E%3Cpath d='M540 365C554 385 545 409 528 420C517 403 519 377 540 365Z'/%3E%3Cpath d='M540 365C520 379 496 371 485 354C501 343 527 344 540 365Z'/%3E%3Cpath d='M491 409C509 431 501 458 483 472C469 454 469 425 491 409Z'/%3E%3Cpath d='M491 409C463 430 429 418 413 394C437 378 473 380 491 409Z'/%3E%3Cpath d='M443 456C426 466 407 457 400 443C414 435 434 438 443 456Z'/%3E%3Cpath d='M1150 190C1108 218 1060 199 1039 164C1073 142 1125 147 1150 190Z'/%3E%3Cpath d='M1111 217C1137 239 1134 274 1115 295C1094 276 1087 242 1111 217Z'/%3E%3Cpath d='M1111 217C1086 234 1056 224 1043 203C1063 189 1095 191 1111 217Z'/%3E%3Cpath d='M1072 246C1100 264 1101 300 1085 322C1062 306 1051 273 1072 246Z'/%3E%3Cpath d='M1072 246C1052 268 1020 265 1002 248C1019 229 1050 224 1072 246Z'/%3E%3Cpath d='M1034 276C1055 300 1047 333 1027 350C1010 329 1008 296 1034 276Z'/%3E%3Cpath d='M1034 276C1002 290 970 272 960 245C986 234 1022 243 1034 276Z'/%3E%3Cpath d='M996 309C1011 330 1002 356 983 368C971 350 973 322 996 309Z'/%3E%3Cpath d='M996 309C973 325 945 315 932 295C952 282 981 284 996 309Z'/%3E%3Cpath d='M959 343C982 363 979 393 962 411C944 395 938 364 959 343Z'/%3E%3Cpath d='M922 380C954 404 952 445 931 469C906 449 896 409 922 380Z'/%3E%3Cpath d='M922 380C893 397 862 382 849 358C873 344 907 350 922 380Z'/%3E%3Cpath d='M886 418C905 433 903 458 890 473C875 460 870 436 886 418Z'/%3E%3Cpath d='M886 418C862 451 820 450 794 428C815 402 855 392 886 418Z'/%3E%3Cpath d='M851 459C870 472 870 496 859 511C843 500 836 477 851 459Z'/%3E%3Cpath d='M851 459C836 481 808 481 791 468C804 450 830 442 851 459Z'/%3E%3Cpath d='M816 501C839 511 844 535 836 554C817 546 805 523 816 501Z'/%3E%3Cpath d='M816 501C790 521 758 511 743 489C765 473 798 474 816 501Z'/%3E%3Cpath d='M782 546C756 567 723 558 707 536C728 520 762 519 782 546Z'/%3E%3Cpath d='M748 592C775 603 781 633 771 654C749 645 735 618 748 592Z'/%3E%3Cpath d='M748 592C731 623 694 627 669 612C684 587 718 573 748 592Z'/%3E%3Cpath d='M682 691C712 703 719 736 708 759C684 749 668 720 682 691Z'/%3E%3Cpath d='M682 691C663 711 634 707 619 691C634 675 663 671 682 691Z'/%3E%3Cpath d='M950 -12C964 36 932 76 892 86C882 46 902 -1 950 -12Z'/%3E%3Cpath d='M926 -3C957 34 944 84 913 108C887 77 886 26 926 -3Z'/%3E%3Cpath d='M926 -3C885 22 839 3 820 -31C853 -51 902 -46 926 -3Z'/%3E%3Cpath d='M901 7C929 37 921 80 895 102C872 77 869 34 901 7Z'/%3E%3Cpath d='M901 7C866 29 827 13 810 -16C839 -33 881 -29 901 7Z'/%3E%3Cpath d='M875 20C905 55 893 101 864 124C840 95 838 47 875 20Z'/%3E%3Cpath d='M875 20C840 50 794 37 771 8C800 -16 848 -17 875 20Z'/%3E%3Cpath d='M849 34C870 53 866 82 850 98C834 82 829 53 849 34Z'/%3E%3Cpath d='M849 34C808 50 771 24 759 -10C793 -22 836 -8 849 34Z'/%3E%3Cpath d='M823 51C845 69 843 99 827 117C809 101 803 72 823 51Z'/%3E%3Cpath d='M823 51C789 76 746 62 727 33C755 13 800 15 823 51Z'/%3E%3Cpath d='M797 69C819 95 811 130 788 148C770 126 769 90 797 69Z'/%3E%3Cpath d='M797 69C772 96 736 91 715 70C735 49 772 43 797 69Z'/%3E%3Cpath d='M770 90C798 110 798 147 780 169C757 152 747 117 770 90Z'/%3E%3Cpath d='M770 90C741 115 702 105 683 80C707 60 747 59 770 90Z'/%3E%3Cpath d='M742 112C763 145 747 182 720 197C704 170 708 131 742 112Z'/%3E%3Cpath d='M742 112C721 138 687 135 667 117C685 97 718 90 742 112Z'/%3E%3Cpath d='M715 137C738 152 738 181 725 199C706 186 698 159 715 137Z'/%3E%3Cpath d='M715 137C684 163 645 153 624 127C649 107 691 105 715 137Z'/%3E%3Cpath d='M686 163C706 189 697 221 676 236C660 215 660 182 686 163Z'/%3E%3Cpath d='M658 192C685 215 681 251 661 272C640 253 633 217 658 192Z'/%3E%3Cpath d='M658 192C638 221 601 222 577 205C594 181 629 170 658 192Z'/%3E%3Cpath d='M629 222C653 245 649 280 629 299C609 280 604 245 629 222Z'/%3E%3Cpath d='M629 222C610 236 588 228 578 213C593 202 616 203 629 222Z'/%3E%3Cpath d='M599 255C584 277 556 278 538 265C551 247 577 238 599 255Z'/%3E%3Cpath d='M1166 439C1199 469 1194 515 1169 541C1142 516 1134 471 1166 439Z'/%3E%3Cpath d='M1166 439C1132 463 1092 448 1075 420C1102 401 1145 404 1166 439Z'/%3E%3Cpath d='M1139 457C1167 483 1161 523 1138 545C1116 522 1111 483 1139 457Z'/%3E%3Cpath d='M1139 457C1103 487 1056 475 1033 444C1062 420 1111 419 1139 457Z'/%3E%3Cpath d='M1112 476C1150 507 1147 557 1121 587C1090 562 1079 512 1112 476Z'/%3E%3Cpath d='M1112 476C1078 497 1039 480 1024 451C1052 435 1094 440 1112 476Z'/%3E%3Cpath d='M1086 498C1117 517 1119 554 1103 579C1078 563 1065 527 1086 498Z'/%3E%3Cpath d='M1060 521C1097 542 1101 586 1082 615C1053 597 1037 556 1060 521Z'/%3E%3Cpath d='M1060 521C1040 541 1011 535 996 518C1013 502 1042 500 1060 521Z'/%3E%3Cpath d='M1035 547C1064 573 1059 612 1037 634C1014 613 1008 574 1035 547Z'/%3E%3Cpath d='M1035 547C1020 570 991 571 973 558C986 539 1013 530 1035 547Z'/%3E%3Cpath d='M1010 575C1040 604 1033 647 1008 671C984 646 979 603 1010 575Z'/%3E%3Cpath d='M1010 575C988 597 957 591 939 572C958 555 990 551 1010 575Z'/%3E%3Cpath d='M986 604C1008 626 1003 658 984 675C966 657 962 625 986 604Z'/%3E%3Cpath d='M962 636C988 648 992 678 981 698C960 688 947 661 962 636Z'/%3E%3Cpath d='M962 636C952 657 929 661 912 652C920 635 941 625 962 636Z'/%3E%3Cpath d='M938 669C912 695 875 689 854 667C876 646 914 641 938 669Z'/%3E%3Cpath d='M915 704C897 729 866 728 847 712C862 693 892 685 915 704Z'/%3E%3Cpath d='M892 742C925 749 939 781 932 808C905 802 883 774 892 742Z'/%3E%3Cpath d='M870 781C899 791 909 822 899 846C875 837 858 810 870 781Z'/%3E%3Cpath d='M870 781C851 809 816 810 794 794C810 771 843 761 870 781Z'/%3E%3Cpath d='M848 823C874 827 885 851 881 872C860 868 842 848 848 823Z'/%3E%3Cpath d='M848 823C828 846 797 843 778 826C795 807 826 801 848 823Z'/%3E%3C/g%3E%3Cg fill='none' stroke='%2308301c' stroke-width='7' stroke-linecap='round'%3E%3Cpath d='M1200 -20Q748 130 380 520'/%3E%3Cpath d='M1200 160Q886 340 640 760'/%3E%3Cpath d='M980 -20Q795 20 560 300'/%3E%3Cpath d='M1200 420Q984 530 820 880'/%3E%3C/g%3E%3C/svg%3E") center/contain no-repeat;filter:blur(9px);mix-blend-mode:multiply;will-change:transform}
+.leaves.l1{right:-22vmax;top:-18vmax;opacity:.2;transform-origin:100% 0;animation:sway1 11s ease-in-out infinite alternate}
+.leaves.l2{left:-30vmax;bottom:-30vmax;opacity:.13;transform-origin:0 100%;animation:sway2 14s ease-in-out infinite alternate}
+@keyframes sway1{from{transform:rotate(-2.2deg) translate(0,0)}to{transform:rotate(2.6deg) translate(-1.6vmax,1.2vmax)}}
+@keyframes sway2{from{transform:scale(-1,-1) rotate(-2deg)}to{transform:scale(-1,-1) rotate(2.4deg) translate(1.4vmax,-1vmax)}}
+.flecks{position:absolute;inset:0;mix-blend-mode:soft-light;filter:blur(3px);animation:fleck 7s ease-in-out infinite alternate;background:
+  radial-gradient(46px 30px at 70% 14%,rgba(255,232,160,.6),transparent 70%),
+  radial-gradient(30px 22px at 77% 24%,rgba(255,232,160,.55),transparent 70%),
+  radial-gradient(64px 40px at 86% 36%,rgba(255,232,160,.5),transparent 70%),
+  radial-gradient(26px 18px at 62% 30%,rgba(255,232,160,.55),transparent 70%),
+  radial-gradient(52px 34px at 92% 10%,rgba(255,232,160,.55),transparent 70%),
+  radial-gradient(40px 26px at 80% 48%,rgba(255,232,160,.42),transparent 70%),
+  radial-gradient(56px 36px at 12% 78%,rgba(255,232,160,.45),transparent 70%),
+  radial-gradient(30px 20px at 20% 88%,rgba(255,232,160,.5),transparent 70%),
+  radial-gradient(44px 28px at 6% 66%,rgba(255,232,160,.42),transparent 70%)}
+@keyframes fleck{0%{transform:translate(0,0);opacity:.75}50%{opacity:1}100%{transform:translate(-14px,10px);opacity:.85}}
+.motes span{position:absolute;left:var(--x);top:var(--y);width:var(--s);height:var(--s);border-radius:50%;background:rgba(255,240,180,.95);box-shadow:0 0 10px 2px rgba(255,236,160,.6);opacity:0;animation:mote var(--d) linear var(--dl) infinite}
+@keyframes mote{0%{transform:translate(0,0);opacity:0}15%{opacity:.95}85%{opacity:.7}100%{transform:translate(var(--dx),-26vh);opacity:0}}
+
+/* the base world */
+:root[data-theme="light"] body{background:linear-gradient(180deg,#A6C9AE 0%,#97BFA1 45%,#A0C5A8 100%) fixed}
+:root[data-theme="light"] .blob.b1{background:radial-gradient(circle,rgba(239,224,150,.9),transparent 65%);opacity:.38}
+:root[data-theme="light"] .blob.b2{background:radial-gradient(circle,#5FA27A,transparent 65%);opacity:.32}
+:root[data-theme="light"] .blob.b3{background:radial-gradient(circle,#4E9C93,transparent 65%);opacity:.22}
+:root[data-theme="light"] .grain{opacity:.22}
+:root[data-theme="light"] .cursor-glow{mix-blend-mode:soft-light;width:520px;height:520px}
+:root[data-theme="light"] ::selection{background:var(--deep);color:var(--sun)}
+
+/* tinted greenhouse glass — sunlit edge, never white */
+:root[data-theme="light"] .card{background:linear-gradient(165deg,rgba(236,246,214,.16),rgba(10,56,32,.07) 45%,rgba(10,56,32,.11));border-color:rgba(236,246,214,.28);backdrop-filter:blur(16px) saturate(1.5);-webkit-backdrop-filter:blur(16px) saturate(1.5)}
+:root[data-theme="light"] .now-card{background:linear-gradient(165deg,rgba(236,246,214,.18),rgba(10,56,32,.12))}
+:root[data-theme="light"] .now-card h3,:root[data-theme="light"] .now-list li{color:var(--ink)}
+:root[data-theme="light"] .chip,:root[data-theme="light"] .now-list li,:root[data-theme="light"] .skill,:root[data-theme="light"] .link-row,:root[data-theme="light"] .metric,:root[data-theme="light"] .gpa div{border-color:rgba(236,246,214,.22)}
+:root[data-theme="light"] header.nav.scrolled{background:linear-gradient(180deg,rgba(176,212,182,.72),rgba(150,196,162,.72));border-color:rgba(236,246,214,.35);box-shadow:0 14px 34px -20px rgba(6,46,26,.55)}
+:root[data-theme="light"] .nav-links{background:rgba(10,56,32,.07);border-color:rgba(236,246,214,.25)}
+
+/* deep evergreen controls with cream-gold lettering */
+:root[data-theme="light"] .btn-primary,:root[data-theme="light"] .nav-links a.active,:root[data-theme="light"] .mono,
+:root[data-theme="light"] .lens button.on,:root[data-theme="light"] .tabs button.on,:root[data-theme="light"] .schema-tabs button.on,
+:root[data-theme="light"] .toast,:root[data-theme="light"] .link-row .ic{color:var(--on-deep)}
+:root[data-theme="light"] .btn-primary{background:linear-gradient(160deg,#145A36,#0A2E1B);box-shadow:0 1px 0 rgba(244,226,161,.25) inset,0 16px 32px -14px rgba(6,46,26,.7)}
+:root[data-theme="light"] .btn-primary:hover{box-shadow:0 1px 0 rgba(244,226,161,.35) inset,0 18px 40px -12px rgba(6,46,26,.75),0 0 0 4px rgba(244,226,161,.25)}
+:root[data-theme="light"] .mono{background:linear-gradient(150deg,#145A36,#0A2E1B);color:var(--sun)}
+:root[data-theme="light"] .icon-btn{color:var(--deep);background:rgba(244,226,161,.22);border-color:rgba(244,226,161,.45)}
+
+/* type: evergreen ink, emerald italics with a sunlit underglow */
+:root[data-theme="light"] h1 em,:root[data-theme="light"] h2 em{color:var(--accent);text-shadow:0 0 28px rgba(244,226,161,.55)}
+:root[data-theme="light"] .hero-name{text-shadow:0 1px 0 rgba(236,246,214,.25)}
+:root[data-theme="light"] .eyebrow{color:var(--accent)}
+:root[data-theme="light"] .simile svg{color:var(--gold)}
+
+/* modules */
+:root[data-theme="light"] .stat b sup{color:var(--gold)}
+:root[data-theme="light"] .step{background:linear-gradient(180deg,rgba(236,246,214,.22),rgba(10,56,32,.10));border-color:rgba(236,246,214,.3)}
+:root[data-theme="light"] .step::before{background:rgba(236,246,214,.32);border-color:rgba(236,246,214,.35)}
+:root[data-theme="light"] .step.on{background:linear-gradient(180deg,#1C7346,#0B321E);color:var(--on-deep);box-shadow:0 30px 50px -24px rgba(6,46,26,.75),0 0 0 1px rgba(244,226,161,.25) inset}
+:root[data-theme="light"] .step.on::before{background:#2A8656}
+:root[data-theme="light"] .walker,:root[data-theme="light"] .trail path{--gold:#8A6414}
+:root[data-theme="light"] .course .b{background:linear-gradient(160deg,#1C7346,#0B321E);color:var(--on-deep)}
+:root[data-theme="light"] .course code,:root[data-theme="light"] .skill .ic{background:rgba(10,56,32,.12);color:var(--accent)}
+:root[data-theme="light"] .awards li .ic{background:rgba(244,226,161,.35);color:var(--gold)}
+:root[data-theme="light"] #radar .shape{fill:rgba(19,98,58,.24);filter:drop-shadow(0 8px 18px rgba(244,226,161,.6))}
+:root[data-theme="light"] #radar .ring.odd{fill:rgba(236,246,214,.12)}
+:root[data-theme="light"] .field input,:root[data-theme="light"] .field select,:root[data-theme="light"] .field textarea{background:rgba(10,56,32,.08);border-color:rgba(8,40,22,.22)}
+:root[data-theme="light"] .field input::placeholder,:root[data-theme="light"] .field textarea::placeholder{color:rgba(24,52,36,.55)}
+:root[data-theme="light"] .scene svg{filter:saturate(1.06)}
+:root[data-theme="light"] .schema-stage{box-shadow:0 0 0 1px rgba(236,246,214,.25)}
+:root[data-theme="light"] .seam i{background:linear-gradient(90deg,transparent,var(--accent) 30%,#C9A23E 50%,var(--accent) 70%,transparent)}
+:root[data-theme="light"] .study-bg i{background:radial-gradient(circle,rgba(244,226,161,.45),transparent 65%)}
+
+@media (max-width:600px){
+  .leaves{filter:blur(7px)}
+  .leaves.l1{animation-duration:16s}
+  .rays{opacity:.7}
+  .flecks{opacity:.6}
+}
+@media (prefers-reduced-motion:reduce){.daylight *{animation:none!important}}
 
 /* ---------- layout ---------- */
 .wrap{width:min(1200px,100% - 40px);margin-inline:auto}
@@ -159,17 +261,7 @@ header.nav.scrolled{background:color-mix(in srgb,var(--surface-solid) 78%,transp
 .hero-right .stat b{font-size:clamp(20px,2vw,27px)}
 .hero-right .stat span{display:block;font-size:10px;line-height:1.35;margin-top:5px}
 .now-card{background:rgba(38,70,48,.20)}
-:root:not([data-theme="dark"]) .now-card h3,
-:root:not([data-theme="dark"]) .now-card h4,
-:root:not([data-theme="dark"]) .now-card .sub,
-:root:not([data-theme="dark"]) .now-card .now-list li {
-  color: #000;
-  font-weight: 800;
-}
-
-:root[data-theme="dark"] .now-card {
-  color: var(--ink);
-}
+:root[data-theme="dark"] .now-card{color:var(--ink)}
 .scroll-hint{position:absolute;left:50%;bottom:14px;transform:translateX(-50%);z-index:2;font-size:11px;font-weight:700;letter-spacing:.2em;color:var(--muted);display:flex;flex-direction:column;align-items:center;gap:8px}
 .scroll-hint i{width:1.5px;height:34px;background:linear-gradient(var(--accent),transparent);animation:drip 2s ease-in-out infinite;transform-origin:top}
 @keyframes drip{0%{transform:scaleY(0)}50%{transform:scaleY(1)}100%{transform:scaleY(1);opacity:0}}
@@ -424,6 +516,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
 </head>
 <body>
 <div class="bg-field" aria-hidden="true"><div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div></div>
+<div class="daylight" aria-hidden="true"><div class="sunwash"></div><div class="rays"></div><div class="leaves l1"></div><div class="leaves l2"></div><div class="flecks"></div><div class="motes" id="motes"></div></div>
 <div class="grain" aria-hidden="true"></div>
 <div class="cursor-glow" aria-hidden="true"></div>
 <div class="progress" aria-hidden="true"></div>
@@ -438,8 +531,9 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
     <a href="#about">About</a><a href="#journey">Journey</a><a href="#skills">Skills</a><a href="#learning">Learning</a><a href="#contact">Contact</a>
   </nav>
   <div class="nav-actions">
-    <button class="icon-btn" id="themeBtn" aria-label="Toggle dark mode">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+    <button class="icon-btn" id="themeBtn" aria-label="Switch to light theme">
+      <svg class="i-sun" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2.2M12 19.8V22M4.9 4.9l1.6 1.6M17.5 17.5l1.6 1.6M2 12h2.2M19.8 12H22M4.9 19.1l1.6-1.6M17.5 6.5l1.6-1.6"/></svg>
+      <svg class="i-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
     </button>
     <button class="btn btn-primary nav-cv" data-open-cv>View CV</button>
     <button class="icon-btn burger" id="burger" aria-label="Open menu" aria-expanded="false">
@@ -888,16 +982,41 @@ const ic = k => `<svg width="17" height="17" viewBox="0 0 24 24" fill="none" str
 
 /* ---------- theme ---------- */
 const store = { get(k){try{return localStorage.getItem(k)}catch(e){return null}}, set(k,v){try{localStorage.setItem(k,v)}catch(e){}} };
-const saved = store.get('rs-theme');
-root.dataset.theme = saved || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+// every visit opens in the dark (night forest) world; light is the morning you step into
+root.dataset.theme = 'dark';
 const isDark = () => root.dataset.theme ? root.dataset.theme === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches;
 const themeListeners = [];
-$('#themeBtn').addEventListener('click', () => {
-  root.dataset.theme = isDark() ? 'light' : 'dark';
-  store.set('rs-theme', root.dataset.theme);
-  $('meta[name="theme-color"]').content = isDark() ? '#0A1510' : '#AFC2A8';
+const themeBtn = $('#themeBtn');
+const applyTheme = t => {
+  root.dataset.theme = t;
+  $$('meta[name="theme-color"]').forEach(m => m.content = t === 'dark' ? '#0A1510' : '#A3C6AB');
+  themeBtn.setAttribute('aria-label', t === 'dark' ? 'Switch to light theme' : 'Switch to dark theme');
   themeListeners.forEach(f => f());
+};
+themeBtn.addEventListener('click', () => {
+  const next = isDark() ? 'light' : 'dark';
+  if (!document.startViewTransition || reduce) return applyTheme(next);
+  const b = themeBtn.getBoundingClientRect(), x = b.left + b.width / 2, y = b.top + b.height / 2;
+  const r = Math.hypot(Math.max(x, innerWidth - x), Math.max(y, innerHeight - y));
+  root.classList.add('vt');
+  const vt = document.startViewTransition(() => applyTheme(next));
+  vt.ready.then(() => root.animate(
+    { clipPath: [`circle(0px at ${x}px ${y}px)`, `circle(${r}px at ${x}px ${y}px)`] },
+    { duration: 1100, easing: 'cubic-bezier(.65,0,.25,1)', pseudoElement: '::view-transition-new(root)' }));
+  vt.finished.finally(() => root.classList.remove('vt'));
 });
+applyTheme('dark');
+
+/* ---------- daylight motes (light theme) ---------- */
+(() => {
+  const host = $('#motes'); if (!host) return;
+  const n = innerWidth < 600 ? 10 : 18; let h = '';
+  for (let i = 0; i < n; i++) {
+    const x = Math.random() * 100, y = 40 + Math.random() * 60;
+    h += `<span style="--x:${x}%;--y:${y}%;--s:${2 + Math.random() * 3}px;--d:${12 + Math.random() * 14}s;--dl:${-Math.random() * 20}s;--dx:${(Math.random() - .5) * 120}px"></span>`;
+  }
+  host.innerHTML = h;
+})();
 
 /* ---------- nav, progress, menu ---------- */
 const nav = $('#nav'), prog = $('.progress');
@@ -1288,16 +1407,16 @@ const startScene = () => {
 
   const palette = () => {
     const dark = isDark();
-    const A = new THREE.Color(dark ? '#62C980' : '#1F5A37'), B = new THREE.Color(dark ? '#D8B565' : '#86651F'), C = new THREE.Color(dark ? '#A9E2B6' : '#3F7550');
+    const A = new THREE.Color(dark ? '#62C980' : '#0F5A33'), B = new THREE.Color(dark ? '#D8B565' : '#A9780F'), C = new THREE.Color(dark ? '#A9E2B6' : '#2E7C4E');
     for (let i = 0; i < COUNT; i++) { const c = i % 11 === 0 ? B : i % 3 ? A : C; colors.set([c.r, c.g, c.b], i * 3); }
     ptsGeo.attributes.color.needsUpdate = true;
-    lineMat.color.set(dark ? '#62C980' : '#1F5A37'); lineMat.opacity = dark ? .18 : .26;
-    pMat.color.set(dark ? '#F2D58A' : '#86651F');
-    ringMat.color.set(dark ? '#62C980' : '#1F5A37');
-    core.material.color.set(dark ? '#3E8E57' : '#C6D5BD');
-    pMat.blending = dark ? THREE.AdditiveBlending : THREE.NormalBlending; pMat.needsUpdate = true;
+    lineMat.color.set(dark ? '#62C980' : '#0F4F2D'); lineMat.opacity = dark ? .18 : .3;
+    pMat.color.set(dark ? '#F2D58A' : '#FFE9A8');
+    ringMat.color.set(dark ? '#62C980' : '#0F4F2D');
+    core.material.color.set(dark ? '#3E8E57' : '#F6E3A0');
+    pMat.blending = THREE.AdditiveBlending; pMat.needsUpdate = true;
     const m = innerWidth < 900;
-    canvas.style.opacity = dark ? (m ? .45 : 1) : (m ? .2 : .4);
+    canvas.style.opacity = dark ? (m ? .45 : 1) : (m ? .32 : .72);
   };
   palette(); themeListeners.push(palette);
 
@@ -1307,7 +1426,7 @@ const startScene = () => {
     const m = innerWidth < 900;
     group.position.set(m ? 0 : 2.6, m ? 1.2 : 0.1, 0);
     group.scale.setScalar(m ? .78 : 1);
-    canvas.style.opacity = isDark() ? (m ? .45 : 1) : (m ? .2 : .4);
+    canvas.style.opacity = isDark() ? (m ? .45 : 1) : (m ? .32 : .72);
   };
   resize(); addEventListener('resize', resize);
 
